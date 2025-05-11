@@ -93,7 +93,14 @@ class Node:
             except:
                 continue
         return "nothing worked?"
+    
+    def __str__(self):
+        return "rdtcyfvgubhijkn"
 
 node, (i0, i1) = Node.create(b'1', b'2', b'4', b'8', "XOR")
 
 print(str(int.from_bytes(i0, "big")) + " " + str(int.from_bytes(i1, "big")))
+print(node)
+print(node.messages[0])
+print(node.decrypt(89, 789))
+print(node.sk)
